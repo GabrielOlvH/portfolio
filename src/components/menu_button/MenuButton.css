@@ -1,0 +1,52 @@
+.arrow {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    color: yellow;
+    width: 10px;
+
+}
+
+.menu-button-container {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    flex-flow: row-reverse;
+    position: relative;
+    transform: translate(-10px);
+}
+
+.menu-button {
+    flex: 1;
+}
+
+.menu-button:hover:not(:disabled)  {
+    background-color: yellow;
+}
+.menu-button:hover:not(:disabled) + .arrow {
+    opacity: 1;
+    transition: opacity .25s;
+    text-shadow: 1px 1px 1px black;
+    animation: arrow_point 1.5s infinite ease-in-out;
+}
+
+.menu-button:disabled {
+    border:none;
+    color: gray;
+    background: none;
+}
+
+@keyframes arrow_point {
+    0% {
+        transform: translate(-150%, -45%);
+    }
+    50% {
+        transform: translate(-200%, -45%);
+    }
+    100% {
+        transform: translate(-150%, -45%);
+    }
+
+}

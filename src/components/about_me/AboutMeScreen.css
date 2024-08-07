@@ -1,0 +1,32 @@
+.aboutme-screen {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 20/9;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.aboutme {
+    animation: fade-in 3.5s;
+}
+
+.name {
+    position: relative;
+    top: 0;
+    color: yellow;
+    font-family: Consolas, serif;
+    margin: 0 0 20px 0;
+    padding: 0;
+    opacity: 95%;
+    font-size: 2rem;
+    text-shadow: 0 0 30px #e0e01f;
+    @media screen and (max-width: 800px) {
+        font-size: 1.5rem;
+    }
+}
+

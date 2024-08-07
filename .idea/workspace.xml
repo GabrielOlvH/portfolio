@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="417e5ee5-7c19-4a22-ab6c-16b901e672a8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bisect_hosting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/college.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/freelance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/locales/en/translation.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/locales/pt/translation.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/quackity_studios.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sheep.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/icons/Icons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/menu_button/MenuButton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/menu_button/MenuButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/settings/SettingsScreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/settings/SettingsScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/spline_display/SplineDisplay.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/spline_display/SplineDisplay.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/typewriter/Typewriter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/typewriter/Typewriter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fonts/Consolas.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/i18n.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DarkyenusTimeTracker">
+    <option name="totalTimeSeconds" value="2672" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2kLQhvGMMWltejCef6t994MtrrM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/gabri/IdeaProjects/portfolio (2)/portfolio",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="417e5ee5-7c19-4a22-ab6c-16b901e672a8" name="Changes" comment="" />
+      <created>1723060499865</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723060499865</updated>
+      <workItem from="1723060501111" duration="3288000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

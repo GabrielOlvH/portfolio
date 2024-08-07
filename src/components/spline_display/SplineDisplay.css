@@ -1,0 +1,19 @@
+.spline {
+    background-color: #31516F;
+}
+.info h2 {
+    padding: 0;
+    margin: 0;
+}
+.info {
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    color: #E0E1DD;
+    background-color: #132D45;
+    border-radius: 1rem;
+    filter: drop-shadow(2px 2px 2px black);
+    padding: 2rem;
+    width: 30%;
+}
+
