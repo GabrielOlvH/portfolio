@@ -1,0 +1,45 @@
+{
+  "back_to_title_screen": "VOLTAR A TELA INICIAL",
+
+  "title_screen_subtitle": "portfolio de um desenvolvedor full stack.",
+  "title_screen_about_me_button": "SOBRE MIM",
+  "title_screen_projects_button": "PROJETOS",
+  "title_screen_work_experience_button": "EXPERIÊNCIA DE TRABALHO",
+  "title_screen_contact_button": "CONTATO",
+  "title_screen_settings_button": "OPÇÕES",
+
+  "projects_screen_title": "PROJETOS PESSOAIS",
+  "projects_industrial_revolution_title": "Industrial Revolution",
+  "projects_industrial_revolution_desc": "Um mod industrial para Minecraft que adiciona várias máquinas, ferramentas, minérios e novas mecânicas",
+  "projects_the_castor_odyssey_title": "A Odisseia de Castor",
+  "projects_the_castor_odyssey_desc": "Um jogo sério contendo vários mini jogos baseados no Desafio Internacional Bebras de Informática para ensinar Pensamento Computacional em realidade virtual",
+  "projects_pokemon_tcg_replay_title": "Pokémon TCG Replay",
+  "projects_pokemon_tcg_replay_desc": "Um software de reprodução feito em Unity para ser capaz de ler logs pós-jogo do Pokémon TCG Live e simular os jogos",
+  "projects_cafeteria_development_website_title": "Site da Cafeteria Development",
+  "projects_cafeteria_development_website_desc": "Um site para exibir e adicionar documentação para mods criados por mim e um grupo de amigos",
+  "projects_simple_text_editor_title": "Editor de Texto Simples",
+  "projects_simple_text_editor_desc": "Um editor de texto simples feito em Rust",
+  "project_screen_select": "SELECIONAR PROJETO",
+
+  "about_me_screen_title": "SOBRE MIM",
+
+  "work_experience_screen_title": "EXPERIÊNCIA & EDUCAÇÃO",
+  "work_experience_quackity_studios_title": "Quackity Studios",
+  "work_experience_quackity_studios_desc": "<p>Entrei na Quackity Studios em setembro de 2023 e saí em janeiro de 2024.<br/>Nos primeiros meses, participei do desenvolvimento de uma série de mini-jogos para um evento futuro das Olimpíadas. <ul><li>One-Hit Man</li><li>Jump To Victory</li><li>Laser Tag</li></ul>Nenhum desses mini-jogos acabou sendo utilizado, pois a empresa foi dissolvida antes do evento.<br/>Após algumas semanas, fui convidado para ajudar no desenvolvimento de um mod que simulava Desastres Naturais no Minecraft para um evento diferente que aconteceria em breve. Junto com o mod de Desastres Naturais, fui solicitado a trabalhar em um sistema de Missões, que incluía várias funcionalidades como:<ul><li>Missões pessoais diárias</li><li>Contratos globais diários</li><li>Times de missão para eventos</li><li>Sistema de loja personalizável</li></ul>Todas essas funcionalidades foram solicitadas com pouco tempo e desenvolvidas em 3 dias.<br/>Este sistema de missões e loja continuou sendo usado no servidor principal por um tempo e na segunda vez que o evento aconteceu.<br/>Trabalhando aqui, aprendi mais sobre trabalhar em equipe, como comunicar de forma mais eficaz com os membros da equipe, como encontrar soluções criativas para problemas difíceis e contornar limitações.</p>",
+
+  "work_experience_bisect_hosting_title": "Bisect Hosting",
+  "work_experience_bisect_hosting_desc": "<p>Entrei na Bisect Hosting em setembro de 2023 e tenho trabalhado no mesmo projeto desde então.<br/>Candidatei-me através de um formulário anunciado no servidor do Discord deles e fui contatado e entrevistado pouco depois. O projeto que me foi solicitado desenvolver ainda não foi lançado.</p>",
+
+  "work_experience_ic_title": "The Castor Odyssey",
+  "work_experience_ic_desc": "<p>Este projeto começou em agosto de 2023 e está em desenvolvimento ativo com o objetivo de ser utilizado em escolas para promover o Pensamento Computacional aos estudantes.<br/>Para este projeto, fiz um curso rápido de Unity com um membro do GRVA (Grupo de Realidade Virtual e Aumentada), que durou algumas semanas. The Castor Odyssey é um projeto de iniciação científica da UFU (Universidade Federal de Uberlândia), brevemente descrito como \"Um Jogo de Escape Personalizável Baseado na Categorização do Pensamento Computacional\" no artigo submetido à CISTI (Conferência Ibérica de Sistemas e Tecnologias de Informação).<br/>O jogo consiste em uma série de mini-jogos baseados em exercícios do Desafio Bebras, e completar cada mini-jogo fornecerá ao jogador um item para um piquenique que acontecerá na floresta, onde várias espécies de animais estarão presentes. Cada mini-jogo foi desenvolvido em equipes de dois.<br/>O mini-jogo em que participei no desenvolvimento é baseado em reconhecimento de padrões, onde o jogador deve analisar três sanduíches e seus ingredientes descritos por letras e encontrar a combinação de ingredientes solicitada por um dos animais.</p>",
+
+  "work_experience_college_title": "Universidade Federal de Uberlândia",
+  "work_experience_college_desc": "<p>Entre na universidade no segundo semestre de 2021 e espero me formar em 2025.</p>",
+
+  "work_experience_free_lancing_title": "Freelancer",
+  "work_experience_free_lancing_desc": "<p>Desenvolvi vários projetos para um youtuber.</p>",
+
+
+  "settings_screen_title": "OPÇÕES",
+  "settings_load_animations": "Animações de carregamento"
+}

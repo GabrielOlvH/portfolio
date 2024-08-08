@@ -1,0 +1,41 @@
+{
+  "title_screen_subtitle": "a full-stack developer's portfolio.",
+  "back_to_title_screen": "BACK TO TITLE SCREEN",
+  "project_screen_select": "SELECT PROJECT",
+  "title_screen_about_me_button": "ABOUT ME",
+  "title_screen_projects_button": "PROJECTS",
+  "title_screen_work_experience_button": "EXPERIENCE & EDUCATION",
+  "title_screen_contact_button": "CONTACT",
+  "title_screen_settings_button": "SETTINGS",
+
+  "projects_screen_title": "PERSONAL PROJECTS",
+  "projects_industrial_revolution_title": "Industrial Revolution",
+  "projects_industrial_revolution_desc": "An industrial mod for Minecraft that adds several machines, tools, ores and new mechanics",
+  "projects_the_castor_odyssey_title": "The Castor Odyssey",
+  "projects_the_castor_odyssey_desc": "A serious game containing several mini games based on the International Bebras Challenge on Informatics to teach Computational Thinking in virtual reality",
+  "projects_pokemon_tcg_replay_title": "Pokémon TCG Replay",
+  "projects_pokemon_tcg_replay_desc": "A replay software made in Unity to be able to read post game Pokémon TCG Live logs and simulates the games",
+  "projects_cafeteria_development_website_title": "Cafeteria Development Website",
+  "projects_cafeteria_development_website_desc": "A website to showcase and add documentation for mods created by me and a group of friends",
+  "projects_simple_text_editor_title": "Simple Text Editor",
+  "projects_simple_text_editor_desc": "A simple text editor made in Rust",
+
+  "about_me_screen_title": "ABOUT ME",
+
+  "work_experience_screen_title": "EXPERIENCE & EDUCATION",
+  "work_experience_quackity_studios_title": "Quackity Studios",
+  "work_experience_quackity_studios_desc": "<p>I joined Quackity Studios in September 2023 and left in January 2024.<br/>For the first couple of months, I participated in developing a series of mini-games for a future Olympics event. <ul><li>One-Hit Man</li><li>Jump To Victory</li><li>Laser Tag</li></ul>None of these mini-games ended up being used, as the company had dissolved before the event.<br/>After a few weeks, I was asked to help in the development of a mod that would simulate Natural Disasters in Minecraft for a different event that would take place very soon. Alongside the Natural Disasters mod, I was asked to work on a Mission system, containing several features such as:<ul><li>Daily personal missions</li><li>Daily global contracts</li><li>Mission teams for events</li><li>Customizable shop system</li></ul>All of these features were requested on very short notice and developed in the span of 3 days.<br/>This mission and shop system continued to be used on the main server for a while and in the second time the event happened.<br/>Working here, I learned more to work as part of a team, how to communicate more effectively with team members, how to find creative solutions to difficult problems and work around limitations.</p>",
+  "work_experience_bisect_hosting_title": "Bisect Hosting",
+  "work_experience_bisect_hosting_desc": "<p>I joined Bisect Hosting in September 2023 and have been working on the same project since.<br/>I applied through a form announced in their Discord server and was contacted and interviewed shortly after.The project I was requested to develop is not released yet.</p>",
+  "work_experience_ic_title": "The Castor Odyssey",
+  "work_experience_ic_desc": "<p>This project started on August 2023 and is in active development with the goal of being used in schools to promote Computational Thinking to students.<br/>For this project, I took a quick Unity course from a member of GRVA (Virtual and Augmented Reality Group) that lasted a few weeks. The Castor Odyssey is scientific initiation project from UFU (Federal University of Uberlândia) which was shortly described as \"A Customizable Escape Game-Like Based on Computational Thinking Categorization\" in the paper submitted to CISTI (Iberian Conference on Information Systems and Technology).<br/>The game is a series of mini-games based on exercises from the Bebras Challenge, and completing each mini-game will provide the player with an item for a picnic taking place in the forest, where many species of animals will attend. Each mini-game was developed in teams of two.<br/>The mini-game I participaed in developing is founded on pattern recognition, where the player must analyse three sandwiches and their ingredients described by letters and find the combination of ingredients requested by one of the animals.</p>",
+  "work_experience_college_title": "Federal University of Uberlândia",
+  "work_experience_college_desc": "<p>I joined college in the second semester of 2021 and am expected to graduate in 2025.<br/></p>",
+  "work_experience_free_lancing_title": "Free Lancing",
+  "work_experience_free_lancing_desc": "<p>I have developed several projects for a youtuber</p>",
+
+  "settings_screen_title": "SETTINGS",
+  "settings_load_animations": "Load animations"
+
+
+}
