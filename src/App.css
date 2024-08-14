@@ -146,13 +146,14 @@ body {
 
 .base-screen {
   display: flex;
-  height: 100dvh;
+  height: 78dvh;
   width: 100dvw;
   justify-content: center;
   align-items: center;
 
   @media screen and (max-width: 600px) {
-
+    height: 100dvh;
+    width: 98dvh;
   }
 }
 

@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="417e5ee5-7c19-4a22-ab6c-16b901e672a8" name="Changes" comment="">
+    <list default="true" id="417e5ee5-7c19-4a22-ab6c-16b901e672a8" name="Changes" comment="Fix warnings, mobile screen alignment and gallery scrolling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/icons/Icons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icons/Icons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +27,12 @@
     &quot;assignee&quot;: &quot;GabrielOlvH&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/GabrielOlvH/portfolio&quot;,
-    &quot;accountId&quot;: &quot;80939f5d-3600-4d5a-a005-190cd3ef9e37&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/GabrielOlvH/portfolio",
+    "accountId": "ad33660f-7aa8-4a08-a343-cbe274ae5d36"
   }
-}</component>
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -96,11 +91,35 @@
       <workItem from="1723316341976" duration="7232000" />
       <workItem from="1723406166370" duration="5829000" />
       <workItem from="1723479980490" duration="192000" />
-      <workItem from="1723665464237" duration="1397000" />
+      <workItem from="1723665464237" duration="2745000" />
     </task>
+    <task id="LOCAL-00001" summary="Fix warnings, mobile screen alignment and gallery scrolling">
+      <option name="closed" value="true" />
+      <created>1723666951294</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723666951294</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix warnings, mobile screen alignment and gallery scrolling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix warnings, mobile screen alignment and gallery scrolling" />
   </component>
 </project>
