@@ -7,7 +7,7 @@ import Spline from "@splinetool/react-spline";
 import AboutMeScreen from "./components/about_me/AboutMeScreen";
 import './i18n';
 import WorkExperienceScreen from "./components/work_experience_screen/WorkExperienceScreen";
-import {BrowserRouter, Route, Router, Routes} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route, Router, Routes} from "react-router-dom";
 import SettingsScreen from "./components/settings/SettingsScreen";
 
 
@@ -50,9 +50,11 @@ const Screen = ({children}) => {
                     : <Spline className={"bg"} scene="https://prod.spline.design/VLjW643I6uFgRpaW/scene.splinecode"/>
             }
 
-
-            <div style={{width:"100%",height:"100%",position:"absolute"}}></div>
-            {children}
+            {//<div style={{width:"100%",height:"100%",position:"absolute"}}></div>
+                 }
+            <div className={"base-screen"}>
+                {children}
+            </div>
         </>
     )
 }
@@ -61,7 +63,7 @@ function App() {
 
     return (
         <Screen>
-            <BrowserRouter>
+            <HashRouter>
                 <Routes>
                     <Route path="/" element={<TitleScreen/>}/>
                     <Route path="/about" element={<AboutMeScreen/>}/>
@@ -69,7 +71,7 @@ function App() {
                     <Route path="/work-experience" element={<WorkExperienceScreen/>}/>
                     <Route path="/settings" element={<SettingsScreen/>}/>
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         </Screen>
     );
 }

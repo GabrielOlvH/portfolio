@@ -5,41 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="417e5ee5-7c19-4a22-ab6c-16b901e672a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/bisect_hosting.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/college.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/freelance.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/locales/en/translation.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/locales/pt/translation.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/quackity_studios.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sheep.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/icons/Icons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu_button/MenuButton.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu_button/MenuButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/SettingsScreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/SettingsScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/spline_display/SplineDisplay.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/spline_display/SplineDisplay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/typewriter/Typewriter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/typewriter/Typewriter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/Consolas.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/i18n.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/profile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu_button/MenuButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu_button/MenuButton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/settings/SettingsScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/SettingsScreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,28 +31,60 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;GabrielOlvH&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/GabrielOlvH/portfolio&quot;,
+    &quot;accountId&quot;: &quot;80939f5d-3600-4d5a-a005-190cd3ef9e37&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2kLQhvGMMWltejCef6t994MtrrM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/gabri/IdeaProjects/portfolio (2)/portfolio",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Gabriel/IdeaProjects/portfolio/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Gabriel\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Gabriel\IdeaProjects\portfolio\public" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -83,6 +94,13 @@
       <option name="presentableId" value="Default" />
       <updated>1723060499865</updated>
       <workItem from="1723060501111" duration="3288000" />
+      <workItem from="1723074884275" duration="80000" />
+      <workItem from="1723137275685" duration="17000" />
+      <workItem from="1723138174912" duration="4469000" />
+      <workItem from="1723232300930" duration="23000" />
+      <workItem from="1723316341976" duration="7232000" />
+      <workItem from="1723406166370" duration="5829000" />
+      <workItem from="1723479980490" duration="192000" />
     </task>
     <servers />
   </component>

@@ -10,11 +10,6 @@
 }
 
 body {
-  font-family: Consolas, serif;
-  margin: auto;
-
-
-
   overflow: hidden;
 }
 
@@ -40,7 +35,6 @@ body {
 .App {
   text-align: center;
   background-color: #132D45;
-  min-height: 100vh;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -150,13 +144,29 @@ body {
   z-index: -1;
 }
 
-.bg {
-  position: fixed;
-  z-index: -1;
-  transform: scale(120%);
-  min-width: 900px;
-  min-height: 900px;
+.base-screen {
+  display: flex;
+  height: 78dvh;
+  width: 100dvw;
+  justify-content: center;
+  align-items: center;
+}
 
+.bg {
+  position: absolute;
+  z-index: -1;
+  scale: 1.2;
+  margin: 0 auto;
+
+  @media screen and (max-height: 700px) {
+    scale: 1.5;
+    transform: translateY(0%);
+  }
+
+  @media screen and (max-height: 600px) {
+    scale:2;
+    transform: translateY(5%);
+  }
 }
 
 .bg-mobile {

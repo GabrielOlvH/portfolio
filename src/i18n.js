@@ -15,7 +15,7 @@ i18n
         },
         backend: {
             // path where resources get loaded from
-            loadPath: '/locales/{{lng}}/{{ns}}.json',
+            loadPath: 'locales/{{lng}}/{{ns}}.json',
         },
         supportedLngs: ['en', 'pt']
     });

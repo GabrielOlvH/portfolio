@@ -1,18 +1,14 @@
 .aboutme-screen {
     display: flex;
-    position: absolute;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    aspect-ratio: 20/9;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: left;
 }
 
 .aboutme {
     animation: fade-in 3.5s;
+    margin-bottom: 1rem;
 }
 
 .name {
@@ -28,5 +24,112 @@
     @media screen and (max-width: 800px) {
         font-size: 1.5rem;
     }
+}
+
+.profile-pic {
+    height: 64px;
+}
+
+.gallery {
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+    max-width: 25vw;
+    align-items: center;
+    @media screen and (max-width: 800px) {
+        max-width: 90vw;
+    }
+
+}
+
+.gallery-content {
+
+    position: relative;
+    transition: .5s left;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.about-me-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.gallery button {
+    pointer-events: all;
+    cursor: pointer;
+    font-size: 30px;
+    margin:0;
+    padding:0;
+    background: none;
+    border:none;
+
+    color: black;
+
+    transition: .5s opacity, .25s filter, .25s box-shadow, .25s background;
+    filter: blur(0);
+
+}
+
+.gallery button:hover {
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.right-arrow {
+    transform: translateX(20px);
+}
+
+.left-arrow {
+    transform: translateX(-20px);
+}
+
+.gallery button:disabled {
+    opacity: 0;
+    filter: blur(10px);
+}
+
+.card {
+    border-radius: 10px;
+    background-color: lightyellow;
+    padding: 1rem;
+    box-shadow: -5px -5px 5px rgba(0, 0, 0, .5) inset,
+    5px 5px 5px rgba(255, 255, 255, .5) inset;
+    flex-grow: 1;
+    transition: .25s box-shadow, .25s transform;
+}
+
+.card:hover {
+    box-shadow: -7px -7px 7px rgba(0, 0, 0, .5) inset,
+    7px 7px 7px rgba(255, 255, 255, .5) inset;
+    transform: scale(1.05);
+}
+
+.card p {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.played-time {
+    margin-top: 0.5rem !important;
+}
+
+.card-header img {
+    border-radius: calc(10px + .5rem);
+    height: 32px;
+}
+
+.card-header p {
+    white-space: nowrap;
+}
+
+.card-header {
+    min-width: fit-content;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
