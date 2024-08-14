@@ -1,5 +1,4 @@
 import './App.css';
-import Icon from "./components/icons/Icons";
 import TitleScreen from "./components/title_screen/TitleScreen";
 import {useEffect, useState} from "react";
 import ProjectsScreen from "./components/projects_screen/ProjectsScreen";
@@ -7,7 +6,7 @@ import Spline from "@splinetool/react-spline";
 import AboutMeScreen from "./components/about_me/AboutMeScreen";
 import './i18n';
 import WorkExperienceScreen from "./components/work_experience_screen/WorkExperienceScreen";
-import {BrowserRouter, HashRouter, Route, Router, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import SettingsScreen from "./components/settings/SettingsScreen";
 
 
@@ -37,7 +36,7 @@ export function useWindowDimensions() {
 
 
 const Screen = ({children}) => {
-    const {height, width} = useWindowDimensions()
+    const {width} = useWindowDimensions()
     return (
         <>
             <div className={"bg-filter"}>

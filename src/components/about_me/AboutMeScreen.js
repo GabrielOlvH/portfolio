@@ -1,6 +1,6 @@
 import './AboutMeScreen.css';
 import Typewriter from "../typewriter/Typewriter";
-import {useCallback, useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import MenuButton from "../menu_button/MenuButton";
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router-dom";
@@ -8,7 +8,7 @@ import {useNavigate} from "react-router-dom";
 const Card = ({ img, title, played }) => {
     return (<div className={"card"}>
         <div className={"card-header"}>
-            <img src={img}/>
+            <img src={img} alt={title}/>
             <p>{title}</p>
         </div>
         {played === undefined ? <></> : <p className={"played-time"}>{played}</p>}
@@ -23,12 +23,16 @@ const Gallery = ({children}) => {
     const galleryRef = useRef(null);
 
     const [gallerySpeed, setGallerySpeed] = useState(0)
-
-    setTimeout(() => {
-        if (wheelPos < 0 && gallerySpeed < 0) return;
-        if (gallerySpeed > 0 && wheelPos > (contentRef.current?.offsetWidth - galleryRef.current?.offsetWidth)) return;
-        setWheelPos(wheelPos + gallerySpeed)
-    }, 20, [gallerySpeed])
+    useEffect(() => {
+        const runnable = () => {
+            if (wheelPos < 0 && gallerySpeed < 0) return;
+            if (gallerySpeed > 0 && wheelPos > (contentRef.current?.offsetWidth - galleryRef.current?.offsetWidth)) return;
+            setWheelPos(wheelPos + gallerySpeed);
+        }
+        runnable()
+        const interval = setInterval(runnable, 0)
+        return () => clearInterval(interval)
+    }, [wheelPos, gallerySpeed]);
 
 
     return <div ref={galleryRef} className={"gallery"}>
@@ -43,11 +47,11 @@ const Gallery = ({children}) => {
             <button
                 className={"left-arrow"}
                 disabled={wheelPos < 0}
-                onMouseDown={() => setGallerySpeed(-2)}
+                onMouseDown={() => setGallerySpeed(-.25)}
                 onMouseUp={() => setGallerySpeed(0)}
             >{"<"}</button>
             <button className={"right-arrow"}
-                    onMouseDown={() => setGallerySpeed(2)}
+                    onMouseDown={() => setGallerySpeed(.25)}
                     onMouseUp={() => setGallerySpeed(0)}
                     disabled={wheelPos > (contentRef.current?.offsetWidth - galleryRef.current?.offsetWidth)}>{">"}</button>
         </div>
@@ -59,7 +63,7 @@ const Gallery = ({children}) => {
 }
 
 function AboutMeScreen() {
-    const {t, i18n} = useTranslation();
+    const {t} = useTranslation();
     const navigate = useNavigate()
 
     const title = t("about_me_screen_title");
@@ -75,7 +79,7 @@ function AboutMeScreen() {
 
             <div className="aboutme">
                 <div className={"about-me-header"}>
-                    <img src={"profile.png"} className={"profile-pic"}/>
+                    <img src={"profile.png"} className={"profile-pic"} alt={"profile-pic"}/>
                     <div>
                         <p>Listening: </p>
                         <p>Playing: </p>
@@ -87,6 +91,7 @@ function AboutMeScreen() {
                     <Card img={"sheep.png"} title={"Pokemon TCG Live"} played={"??? hours"}></Card>
                     <Card img={"sheep.png"} title={"Minecraft"} played={"??? hours"}></Card>
                     <Card img={"sheep.png"} title={"Stardew Valley"} played={"??? hours"}></Card>
+                    <Card img={"sheep.png"} title={"Outer Wilds"} played={"??? hours"}></Card>
                 </Gallery>
                 <p>Favorite Songs</p>
                 <Gallery>
