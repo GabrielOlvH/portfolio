@@ -1,6 +1,6 @@
 import './AboutMeScreen.css';
 import Typewriter from "../typewriter/Typewriter";
-import {useCallback, useRef, useState} from "react";
+import {useCallback, useEffect, useRef, useState} from "react";
 import MenuButton from "../menu_button/MenuButton";
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router-dom";
@@ -58,6 +58,27 @@ const Gallery = ({children}) => {
     </div>
 }
 
+const GetListening = ( setListening ) => {
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=gabrielolvh&api_key=&format=json');
+                const json = await response.json();
+                const title = json["recenttracks"]["track"][0]["name"]
+                const artist =json["recenttracks"]["track"][0]["artist"]["#text"]
+                setListening({
+                    title: title,
+                    artist: artist
+                })
+
+            } catch (error) {
+                console.error('Erro ao fazer scraping', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+}
 function AboutMeScreen() {
     const {t, i18n} = useTranslation();
     const navigate = useNavigate()
@@ -68,6 +89,11 @@ function AboutMeScreen() {
         setLoadTime(loadedTime - 1);
     }, 1)
 
+    const [listening, setListening] = useState({
+        title: "Loading",
+        artist: "Loading"
+    })
+    GetListening(setListening)
 
     return (
         <div className="aboutme-screen">
@@ -77,7 +103,7 @@ function AboutMeScreen() {
                 <div className={"about-me-header"}>
                     <img src={"profile.png"} className={"profile-pic"}/>
                     <div>
-                        <p>Listening: </p>
+                        <p>Listening: {listening.title} by {listening.artist}</p>
                         <p>Playing: </p>
                     </div>
                 </div>

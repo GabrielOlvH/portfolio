@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="417e5ee5-7c19-4a22-ab6c-16b901e672a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/profile.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu_button/MenuButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu_button/MenuButton.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/settings/SettingsScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/SettingsScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +89,7 @@
       <workItem from="1723316341976" duration="7232000" />
       <workItem from="1723406166370" duration="5829000" />
       <workItem from="1723479980490" duration="192000" />
+      <workItem from="1724263290645" duration="482000" />
     </task>
     <servers />
   </component>
