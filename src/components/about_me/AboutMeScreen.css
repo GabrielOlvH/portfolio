@@ -94,18 +94,19 @@
 
 .card {
     border-radius: 10px;
-    background-color: firebrick;
+    background-color: rgba(255, 255, 255, 0.2);
     padding: 1rem;
     box-shadow: -5px -5px 5px rgba(0, 0, 0, .25) inset,
     5px 5px 5px rgba(255, 255, 255, .25) inset;
-    flex-grow: 1;
-    transition: .25s box-shadow, .25s transform;
+    transition: .25s box-shadow, .25s transform, .25s border-radius;
+    cursor: pointer;
 }
 
 .card:hover {
-    box-shadow: -7px -7px 7px rgba(0, 0, 0, .35) inset,
-    7px 7px 7px rgba(255, 255, 255, .35) inset;
-    transform: scale(1.05);
+    box-shadow: -6px -6px 6px rgba(0, 0, 0, .35) inset,
+    6px 6px 6px rgba(255, 255, 255, .35) inset;
+    border-radius: 15px;
+    transform: scale(1.02);
 }
 
 .card p {
@@ -115,10 +116,12 @@
 
 .played-time {
     margin-top: 0.5rem !important;
+    font-style: italic;
+    font-size: .9rem;
 }
 
 .card-header img {
-    border-radius: calc(10px + .5rem);
+    border-radius: 50%;
     height: 32px;
 }
 
@@ -130,6 +133,7 @@
     min-width: fit-content;
     display: flex;
     gap: 1rem;
+
     align-items: center;
 }
 

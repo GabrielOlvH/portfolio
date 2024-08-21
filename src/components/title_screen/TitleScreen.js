@@ -11,7 +11,6 @@ function TitleScreen() {
 
     let title = "GABRIEL HENRIQUE DE OLIVEIRA"
     let subtitle = t("title_screen_subtitle")
-
     return (
         <div className={"title-screen"}>
             <Typewriter text={title} speed={40} className={"title-screen-name"} delay={1500}/>
