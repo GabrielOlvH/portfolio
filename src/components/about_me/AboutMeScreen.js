@@ -63,13 +63,15 @@ const Gallery = ({children}) => {
 }
 
 const GetListening = ( setListening ) => {
+    const apiKey = process.env.REACT_APP_LAST_FM_API_KEY;
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=gabrielolvh&api_key=&format=json');
+                const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=gabrielolvh&api_key=${apiKey}&format=json`);
+                console.log(response.json)
                 const json = await response.json();
                 const title = json["recenttracks"]["track"][0]["name"]
-                const artist =json["recenttracks"]["track"][0]["artist"]["#text"]
+                const artist = json["recenttracks"]["track"][0]["artist"]["#text"]
                 setListening({
                     title: title,
                     artist: artist
