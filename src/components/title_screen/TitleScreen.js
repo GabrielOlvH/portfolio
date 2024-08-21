@@ -6,7 +6,7 @@ import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router-dom";
 
 function TitleScreen() {
-    const {t, i18n} = useTranslation();
+    const {t} = useTranslation();
     const navigate = useNavigate()
 
     let title = "GABRIEL HENRIQUE DE OLIVEIRA"

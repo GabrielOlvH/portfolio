@@ -38,7 +38,7 @@ const Project = ({i, title, desc, img, select, selected}) => {
 }
 
 function ProjectsScreen() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const navigate = useNavigate()
 
     const title = t("projects_screen_title")

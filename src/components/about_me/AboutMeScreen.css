@@ -45,7 +45,7 @@
 .gallery-content {
 
     position: relative;
-    transition: .5s left;
+    transition: .25s left;
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -94,17 +94,17 @@
 
 .card {
     border-radius: 10px;
-    background-color: lightyellow;
+    background-color: firebrick;
     padding: 1rem;
-    box-shadow: -5px -5px 5px rgba(0, 0, 0, .5) inset,
-    5px 5px 5px rgba(255, 255, 255, .5) inset;
+    box-shadow: -5px -5px 5px rgba(0, 0, 0, .25) inset,
+    5px 5px 5px rgba(255, 255, 255, .25) inset;
     flex-grow: 1;
     transition: .25s box-shadow, .25s transform;
 }
 
 .card:hover {
-    box-shadow: -7px -7px 7px rgba(0, 0, 0, .5) inset,
-    7px 7px 7px rgba(255, 255, 255, .5) inset;
+    box-shadow: -7px -7px 7px rgba(0, 0, 0, .35) inset,
+    7px 7px 7px rgba(255, 255, 255, .35) inset;
     transform: scale(1.05);
 }
 

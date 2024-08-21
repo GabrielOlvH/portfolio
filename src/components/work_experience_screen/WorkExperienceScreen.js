@@ -48,7 +48,7 @@ function convertRemToPixels(rem) {
 const Timeline = ({start, end, events, setSelected}) => {
     const length = end - start;
 
-    const {height, width} = useWindowDimensions()
+    const { width} = useWindowDimensions()
 
     const topEvents = []
     const bottomEvents = []
@@ -80,7 +80,7 @@ const Timeline = ({start, end, events, setSelected}) => {
                              onMouseDown={() => setSelected(j)}
                              onMouseOver={() => setContent(event.start_year + " - " + (event.end === -1 ? " Today" : event.end))}
                              onMouseLeave={() => setContent("")}>
-                            <img src={event.img}/>
+                            <img src={event.img} alt={"event-icon"}/>
                             <div className={"period"} style={{width: `${durationInPx}px`}}></div>
                             <p className={"period-hover"}>{content}</p>
                         </div>
@@ -88,7 +88,7 @@ const Timeline = ({start, end, events, setSelected}) => {
                 } else {
                     eventElement=(
                         <div className={"event"} style={{top: `${left}px`}} onMouseDown={() => setSelected(j)}>
-                            <img src={event.img}/>
+                            <img src={event.img} alt={"event-content"}/>
                             <div className={"period"} style={{height: `${durationInPx}px`}}></div>
                             <p className={"period-hover"}>{content}</p>
                         </div>
@@ -132,7 +132,7 @@ const Timeline = ({start, end, events, setSelected}) => {
 }
 
 function WorkExperienceScreen() {
-    const {t, i18n} = useTranslation();
+    const {t} = useTranslation();
     const navigate = useNavigate()
 
     const title = t("work_experience_screen_title")
@@ -181,7 +181,7 @@ function WorkExperienceScreen() {
             <div className={"work-description-container"}>
                 <div className={"work-description " + (viewingPopup ? "" : "hide-popup")}>
                     <div className={"work-description-header"}>
-                        <img src={events[selected]?.img}/>
+                        <img src={events[selected]?.img} alt={"icon"}/>
                         <div>
                             <p><b>{t(`work_experience_${events[selected]?.id}_title`)}</b></p>
                             <p>{events[selected]?.start_year + "-" + (events[selected]?.end === -1 ? "today" : events[selected]?.end)}</p>

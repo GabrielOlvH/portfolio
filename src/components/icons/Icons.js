@@ -67,6 +67,8 @@ const Icon = ({name, ...props}) => {
             return <RIcon {...props}/>
         case "databases":
             return <DBIcon {...props}/>
+        default:
+            return <p>?</p>
     }
 }
 
