@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="417e5ee5-7c19-4a22-ab6c-16b901e672a8" name="Changes" comment="Add listening message">
-      <change afterPath="$PROJECT_DIR$/public/nowplaying.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/playing.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="417e5ee5-7c19-4a22-ab6c-16b901e672a8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/loading_animation/Loader.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/loading_animation/Loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/settings/SettingsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/SettingsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +99,7 @@
       <workItem from="1724279085319" duration="4691000" />
       <workItem from="1724284865574" duration="2710000" />
       <workItem from="1724341725353" duration="22000" />
-      <workItem from="1724346076946" duration="1693000" />
+      <workItem from="1724346076946" duration="2551000" />
     </task>
     <task id="LOCAL-00001" summary="Add listening message">
       <option name="closed" value="true" />
@@ -110,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724263882708</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="About me information is now proxied">
+      <option name="closed" value="true" />
+      <created>1724347983407</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1724347983407</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +136,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add listening message" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add listening message" />
+    <MESSAGE value="About me information is now proxied" />
+    <option name="LAST_COMMIT_MESSAGE" value="About me information is now proxied" />
   </component>
 </project>

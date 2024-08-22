@@ -5,6 +5,7 @@ import MenuButton from "../menu_button/MenuButton";
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router-dom";
 import {useWindowDimensions} from "../../App";
+import Loader from "../loading_animation/Loader";
 
 
 const events = [
@@ -137,7 +138,6 @@ function WorkExperienceScreen() {
 
     const title = t("work_experience_screen_title")
     const [selected, setSelected] = useState(-1);
-    const [loadedTime, setLoadTime] = useState(1200);
 
     const [viewingPopup, setViewingPopup] = useState(false);
 
@@ -148,74 +148,64 @@ function WorkExperienceScreen() {
     });
 
 
+    const handleScroll = () => {
+        const element = scrollableRef.current;
+        if (element) {
+            const isAtTop = element.scrollTop === 0;
+            const isAtBottom =
+                element.scrollTop + element.clientHeight === element.scrollHeight;
 
-        const handleScroll = () => {
-            const element = scrollableRef.current;
-            if (element) {
-                const isAtTop = element.scrollTop === 0;
-                const isAtBottom =
-                    element.scrollTop + element.clientHeight === element.scrollHeight;
-
-                setScrollPosition({
-                    isAtTop,
-                    isAtBottom,
-                });
-            }
+            setScrollPosition({
+                isAtTop,
+                isAtBottom,
+            });
         }
+    }
 
-
-    setTimeout(() => {
-        setLoadTime(loadedTime - 1);
-    }, 1)
 
     return (
-        <div className="work-experience-screen">
-            <Typewriter text={title} speed={40} className="work-experience-title" delay={500}/>
-            <div className={"work-experience " + (viewingPopup ? "blur-background" : "")}>
-                <Timeline start={2021} end={2024} events={events} setSelected={(a) => setSelected(a) || setViewingPopup(true)}></Timeline>
+        <Loader>
+            <div className="work-experience-screen">
+                <Typewriter text={title} speed={40} className="work-experience-title" delay={500}/>
+                <div className={"work-experience " + (viewingPopup ? "blur-background" : "")}>
+                    <Timeline start={2021} end={2024} events={events}
+                              setSelected={(a) => setSelected(a) || setViewingPopup(true)}></Timeline>
 
-                <div className={"button-list"}>
-                    <MenuButton onClick={() => navigate("/")} text={t("back_to_title_screen")}/>
-                </div>
-            </div>
-            <div className={"work-description-container"}>
-                <div className={"work-description " + (viewingPopup ? "" : "hide-popup")}>
-                    <div className={"work-description-header"}>
-                        <img src={events[selected]?.img} alt={"icon"}/>
-                        <div>
-                            <p><b>{t(`work_experience_${events[selected]?.id}_title`)}</b></p>
-                            <p>{events[selected]?.start_year + "-" + (events[selected]?.end === -1 ? "today" : events[selected]?.end)}</p>
-                        </div>
-                        <button onClick={() => setViewingPopup(false)} className={"close-button"}>🗙</button>
+                    <div className={"button-list"}>
+                        <MenuButton onClick={() => navigate("/")} text={t("back_to_title_screen")}/>
                     </div>
+                </div>
+                <div className={"work-description-container"}>
+                    <div className={"work-description " + (viewingPopup ? "" : "hide-popup")}>
+                        <div className={"work-description-header"}>
+                            <img src={events[selected]?.img} alt={"icon"}/>
+                            <div>
+                                <p><b>{t(`work_experience_${events[selected]?.id}_title`)}</b></p>
+                                <p>{events[selected]?.start_year + "-" + (events[selected]?.end === -1 ? "today" : events[selected]?.end)}</p>
+                            </div>
+                            <button onClick={() => setViewingPopup(false)} className={"close-button"}>🗙</button>
+                        </div>
 
-                    <p style={{marginBottom: "1rem"}}><b>My experience</b></p>
+                        <p style={{marginBottom: "1rem"}}><b>My experience</b></p>
 
-                    <div className={"work-info-scroll-shadow " + (scrollPosition.isAtTop ? "" : "top")}>
-                        <div className={"work-info-scroll-shadow " + (scrollPosition.isAtBottom ? "" : "bottom")}>
-                            <div className={"work-description-experience"}
-                                 ref={scrollableRef}
-                                 onScroll={() => handleScroll()}>
-                                <div
-                                    dangerouslySetInnerHTML={{__html: t(`work_experience_${events[selected]?.id}_desc`)}}>
+                        <div className={"work-info-scroll-shadow " + (scrollPosition.isAtTop ? "" : "top")}>
+                            <div className={"work-info-scroll-shadow " + (scrollPosition.isAtBottom ? "" : "bottom")}>
+                                <div className={"work-description-experience"}
+                                     ref={scrollableRef}
+                                     onScroll={() => handleScroll()}>
+                                    <div
+                                        dangerouslySetInnerHTML={{__html: t(`work_experience_${events[selected]?.id}_desc`)}}>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                 </div>
 
             </div>
-            {
-                loadedTime > 0 ?
-                    <div className={"loader-container-full"}>
-                    <div className={"loader"}></div>
-                    </div>
-                    :
-                    <></>
-            }
-
-        </div>
+        </Loader>
     );
 }
 

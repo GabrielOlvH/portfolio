@@ -4,6 +4,7 @@ import {useEffect, useRef, useState} from "react";
 import MenuButton from "../menu_button/MenuButton";
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router-dom";
+import Loader from "../loading_animation/Loader";
 
 const API_URL = "http://localhost:8080"
 
@@ -157,11 +158,6 @@ function AboutMeScreen() {
     const navigate = useNavigate()
 
     const title = t("about_me_screen_title");
-    const [loadedTime, setLoadTime] = useState(1);
-    const a = setTimeout(() => {
-        setLoadTime(0);
-        clearInterval(a);
-    }, 1200)
 
     const [listening, setListening] = useState([{
         title: "Loading",
@@ -175,72 +171,68 @@ function AboutMeScreen() {
     GetPlaying(setPlaying)
 
     return (
-        <div className="aboutme-screen">
-            <Typewriter text={title} speed={40} className="name" delay={500}/>
+        <Loader>
+            <div className="aboutme-screen">
+                <Typewriter text={title} speed={40} className="name" delay={500}/>
 
-            <div className="aboutme">
-                <div className={"about-me-header"}>
-                    <img src={"profile.png"} className={"profile-pic"} alt={"profile-pic"}/>
-                    <div>
-                        <p style={{padding: "0", margin: "0",paddingRight: "1rem", marginBottom: "2px"}}>
-                            E-mail: gabrielh.oliveira222@gmail.com
-                        </p>
-                        <div style={{display: "flex", flexDirection: "row", marginTop: ".5rem", gap: ".5rem"}}>
-                            <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/github.svg"/>
-                            <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/gitlab.svg"/>
-                            <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/x.svg"/>
-                            <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/discord.svg"/>
-                            <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/linkedin.svg"/>
+                <div className="aboutme">
+                    <div className={"about-me-header"}>
+                        <img src={"profile.png"} className={"profile-pic"} alt={"profile-pic"}/>
+                        <div>
+                            <p style={{padding: "0", margin: "0", paddingRight: "1rem", marginBottom: "2px"}}>
+                                E-mail: gabrielh.oliveira222@gmail.com
+                            </p>
+                            <div style={{display: "flex", flexDirection: "row", marginTop: ".5rem", gap: ".5rem"}}>
+                                <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/github.svg"/>
+                                <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/gitlab.svg"/>
+                                <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/x.svg"/>
+                                <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/discord.svg"/>
+                                <img height="20" width="20"
+                                     src="https://unpkg.com/simple-icons@v13/icons/linkedin.svg"/>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div style={{display: "flex", alignItems: "center", margin: "0", cursor: "pointer"}}>
-                <img src={"equalizer.gif"} style={{mixBlendMode: "multiply", height: "32px", margin: ".5rem"}}/>
-                    <p>Recent Songs</p>
-                </div>
-                <Gallery>
-                    {
-                        listening.map(song => {
-                            return <Card img={song.img} title={song.title} played={`by ${song.artist}`}
-                                         onClick={() => window.open(song.url)}>
-                                {
-                                    song.playing ? <img src={"nowplaying.gif"}
-                                                        style={{
-                                                            mixBlendMode: "multiply",
-                                                            height: "16px",
-                                                            margin: ".5rem"
-                                                        }}/> : <></>
-                                }
-                            </Card>
-                        })
-                    }
-                </Gallery>
-                <div style={{display: "flex", alignItems: "center", margin: "0", cursor: "pointer"}}>
-                    <img src={"playing.gif"} style={{mixBlendMode: "multiply", height: "32px", margin: ".5rem"}}/>
-                    <p>Recent Games</p>
-                </div>
-                <Gallery>
-                    {
-                        playing.toSorted((g, b) => b.playtime - g.playtime).map(game => {
-                            const time = game.playtime < 60 ? "< 1 hour" : `${Math.floor(game.playtime / 60)} hours`
-                            return <Card img={game.img} title={game.title} played={time}
-                                         onClick={() => window.open(game.url)}>
-
-                            </Card>
-                        })
-                    }
-                </Gallery>
-            </div>
-            <MenuButton onClick={() => navigate("/")} text={t("back_to_title_screen")}/>
-            {
-                loadedTime > 0 ?
-                    <div className={"loader-container-full"}>
-                        <div className={"loader"}></div>
+                    <div style={{display: "flex", alignItems: "center", margin: "0", cursor: "pointer"}}>
+                        <img src={"equalizer.gif"} style={{mixBlendMode: "multiply", height: "32px", margin: ".5rem"}}/>
+                        <p>Recent Songs</p>
                     </div>
-                    : <></>
-            }
+                    <Gallery>
+                        {
+                            listening.map(song => {
+                                return <Card img={song.img} title={song.title} played={`by ${song.artist}`}
+                                             onClick={() => window.open(song.url)}>
+                                    {
+                                        song.playing ? <img src={"nowplaying.gif"}
+                                                            style={{
+                                                                mixBlendMode: "multiply",
+                                                                height: "16px",
+                                                                margin: ".5rem"
+                                                            }}/> : <></>
+                                    }
+                                </Card>
+                            })
+                        }
+                    </Gallery>
+                    <div style={{display: "flex", alignItems: "center", margin: "0", cursor: "pointer"}}>
+                        <img src={"playing.gif"} style={{mixBlendMode: "multiply", height: "32px", margin: ".5rem"}}/>
+                        <p>Recent Games</p>
+                    </div>
+                    <Gallery>
+                        {
+                            playing.toSorted((g, b) => b.playtime - g.playtime).map(game => {
+                                const time = game.playtime < 60 ? "< 1 hour" : `${Math.floor(game.playtime / 60)} hours`
+                                return <Card img={game.img} title={game.title} played={time}
+                                             onClick={() => window.open(game.url)}>
 
-        </div>
+                                </Card>
+                            })
+                        }
+                    </Gallery>
+                </div>
+                <MenuButton onClick={() => navigate("/")} text={t("back_to_title_screen")}/>
+
+            </div>
+        </Loader>
     );
 }
 
