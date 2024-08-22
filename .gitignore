@@ -24,3 +24,6 @@ yarn-error.log*
 
 .env.development
 .env
+
+/.idea
+/server/node_modules

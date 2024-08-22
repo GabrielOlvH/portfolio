@@ -19,7 +19,6 @@ function TitleScreen() {
                 <MenuButton onClick={() => navigate("/about")} text={t("title_screen_about_me_button")}/>
                 <MenuButton onClick={() => navigate("/projects")} text={t("title_screen_projects_button")}/>
                 <MenuButton onClick={() => navigate("/work-experience")} text={t("title_screen_work_experience_button")}/>
-                <MenuButton onClick={() => navigate("/contact")} text={t("title_screen_contact_button")}/>
                 <MenuButton onClick={() => navigate("/settings")} text={t("title_screen_settings_button")}/>
             </div>
         </div>

@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="417e5ee5-7c19-4a22-ab6c-16b901e672a8" name="Changes" comment="Add env for api key">
-      <change afterPath="$PROJECT_DIR$/public/equalizer.gif" afterDir="false" />
+    <list default="true" id="417e5ee5-7c19-4a22-ab6c-16b901e672a8" name="Changes" comment="Add listening message">
+      <change afterPath="$PROJECT_DIR$/public/nowplaying.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/playing.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +31,12 @@
     &quot;assignee&quot;: &quot;GabrielOlvH&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/GabrielOlvH/portfolio",
-    "accountId": "ad33660f-7aa8-4a08-a343-cbe274ae5d36"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/GabrielOlvH/portfolio&quot;,
+    &quot;accountId&quot;: &quot;80939f5d-3600-4d5a-a005-190cd3ef9e37&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -46,34 +49,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/gabriel/IdeaProjects/portfolio/public",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/snap/intellij-idea-ultimate/520/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Gabriel/IdeaProjects/portfolio/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Gabriel\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
       <recent name="C:\Users\Gabriel\IdeaProjects\portfolio\public" />
+      <recent name="C:\Users\Gabriel\IdeaProjects\portfolio\server" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.387" />
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.387" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
       </set>
     </attachedChunks>
   </component>
@@ -93,16 +96,19 @@
       <workItem from="1723316341976" duration="7232000" />
       <workItem from="1723406166370" duration="5829000" />
       <workItem from="1723479980490" duration="192000" />
-      <workItem from="1724263290645" duration="482000" />
-      <workItem from="1724269199056" duration="4986000" />
+      <workItem from="1724263290645" duration="666000" />
+      <workItem from="1724279085319" duration="4691000" />
+      <workItem from="1724284865574" duration="2710000" />
+      <workItem from="1724341725353" duration="22000" />
+      <workItem from="1724346076946" duration="1693000" />
     </task>
-    <task id="LOCAL-00001" summary="Add env for api key">
+    <task id="LOCAL-00001" summary="Add listening message">
       <option name="closed" value="true" />
-      <created>1724267688430</created>
+      <created>1724263882708</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1724267688430</updated>
+      <updated>1724263882708</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -122,7 +128,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add env for api key" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add env for api key" />
+    <MESSAGE value="Add listening message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add listening message" />
   </component>
 </project>

@@ -5,11 +5,14 @@ import MenuButton from "../menu_button/MenuButton";
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router-dom";
 
-const Card = ({ img, title, played, onClick}) => {
+const API_URL = "http://localhost:8080"
+
+const Card = ({ img, title, played, onClick, children}) => {
     return (<div className={"card"} onClick={onClick}>
         <div className={"card-header"}>
             <img src={img} alt={title}/>
             <p>{title}{played === undefined ? <></> : <span className={"played-time"}><br/>{played}</span>}</p>
+            {children}
         </div>
 
 
@@ -21,7 +24,7 @@ const Gallery = ({ children }) => {
     const contentRef = useRef(null);
     const galleryRef = useRef(null);
     const scrollInterval = useRef(null);
-    //console.log("rerender");
+
     const startScrolling = (direction) => {
         stopScrolling(); // Garante que qualquer rolagem anterior seja parada
         scrollInterval.current = setInterval(() => {
@@ -59,12 +62,12 @@ const Gallery = ({ children }) => {
                 <button
                     className={"left-arrow"}
                     disabled={wheelPos <= 0}
-                    onMouseDown={() => startScrolling(-1)}
+                    onMouseDown={() => startScrolling(-2)}
                     onMouseUp={stopScrolling}
                     onMouseLeave={stopScrolling}
                 >{"<"}</button>
                 <button className={"right-arrow"}
-                        onMouseDown={() => startScrolling(1)}
+                        onMouseDown={() => startScrolling(2)}
                         onMouseUp={stopScrolling}
                         onMouseLeave={stopScrolling}
                         disabled={wheelPos >= (contentRef.current?.offsetWidth - galleryRef.current?.offsetWidth)}>{">"}</button>
@@ -78,27 +81,29 @@ const Gallery = ({ children }) => {
 
 
 const GetListening = ( setListening ) => {
-    const apiKey = process.env.REACT_APP_LAST_FM_API_KEY;
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=gabrielolvh&api_key=${apiKey}&format=json`);
-                console.log(response.json)
-                const json = await response.json();
+                const response = await fetch( `${API_URL}/recentsongs`);
 
+                const json = await response.json();
                 setListening(
-                    json["recenttracks"]["track"].slice(0, 11).map(obj => {
+                    json["recenttracks"]["track"].slice(0, 10).map(obj => {
                         const title = obj["name"]
                         const artist = obj["artist"]["#text"]
                         const img = obj["image"][1]["#text"]
                         const album = obj["album"]["#text"]
                         const url = obj["url"]
+                        const playing = obj["@attr"] !== undefined && obj["@attr"]["nowplaying"] === "true"
+
+
                         return {
                             title: title,
                             artist: artist,
                             img: img,
                             album: album,
-                            url: url
+                            url: url,
+                            playing: playing
                         }
                     })
                 )
@@ -110,8 +115,43 @@ const GetListening = ( setListening ) => {
         };
 
         fetchData();
-    }, [apiKey, setListening]);
+    }, [setListening]);
 }
+
+const GetPlaying = (setPlaying) => {
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch(`${API_URL}/recentlyplayed`);
+                console.log(response.json)
+                const json = await response.json();
+
+                console.log(json)
+                setPlaying(
+                    json["response"]["games"].map(obj => {
+                        const title = obj["name"]
+                        const img = `https://media.steampowered.com/steamcommunity/public/images/apps/${obj["appid"]}/${obj["img_icon_url"]}.jpg`
+                        const playtime = obj["playtime_forever"]
+
+                        return {
+                            title: title,
+                            img: img,
+                            playtime: playtime
+                        }
+                    })
+                )
+
+
+            } catch (error) {
+                console.error('Failed to request from Last.FM', error);
+            }
+        };
+
+        fetchData();
+    }, [setPlaying]);
+}
+
+
 function AboutMeScreen() {
     const {t} = useTranslation();
     const navigate = useNavigate()
@@ -127,8 +167,12 @@ function AboutMeScreen() {
         title: "Loading",
         artist: "Loading"
     }])
+    const [playing, setPlaying] = useState([{
+        title: "Loading",
+        artist: "Loading"
+    }])
     GetListening(setListening)
-    console.log("aaaaaaa")
+    GetPlaying(setPlaying)
 
     return (
         <div className="aboutme-screen">
@@ -138,30 +182,53 @@ function AboutMeScreen() {
                 <div className={"about-me-header"}>
                     <img src={"profile.png"} className={"profile-pic"} alt={"profile-pic"}/>
                     <div>
-                        <div style={{display: "flex", alignItems: "center", margin: "0", cursor: "pointer"}}
-                             onClick={() => window.open(listening[0].url)}>
-
-                            <p style={{paddingRight: "1rem"}}>{listening[0].title}<br/><span
-                                className={"played-time"}>by {listening[0].artist}</span></p>
-                            <img src={"equalizer.gif"} style={{mixBlendMode: "multiply", height: "42px", margin: "0"}}/>
+                        <p style={{padding: "0", margin: "0",paddingRight: "1rem", marginBottom: "2px"}}>
+                            E-mail: gabrielh.oliveira222@gmail.com
+                        </p>
+                        <div style={{display: "flex", flexDirection: "row", marginTop: ".5rem", gap: ".5rem"}}>
+                            <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/github.svg"/>
+                            <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/gitlab.svg"/>
+                            <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/x.svg"/>
+                            <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/discord.svg"/>
+                            <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/linkedin.svg"/>
                         </div>
                     </div>
                 </div>
-                <p>Recent Songs</p>
+                <div style={{display: "flex", alignItems: "center", margin: "0", cursor: "pointer"}}>
+                <img src={"equalizer.gif"} style={{mixBlendMode: "multiply", height: "32px", margin: ".5rem"}}/>
+                    <p>Recent Songs</p>
+                </div>
                 <Gallery>
                     {
-                        listening.slice(1).map(song => {
-                            return <Card img={song.img} title={song.title} played={`by ${song.artist}`} onClick={() => window.open(song.url)}></Card>
+                        listening.map(song => {
+                            return <Card img={song.img} title={song.title} played={`by ${song.artist}`}
+                                         onClick={() => window.open(song.url)}>
+                                {
+                                    song.playing ? <img src={"nowplaying.gif"}
+                                                        style={{
+                                                            mixBlendMode: "multiply",
+                                                            height: "16px",
+                                                            margin: ".5rem"
+                                                        }}/> : <></>
+                                }
+                            </Card>
                         })
                     }
                 </Gallery>
-                <p>Recently Played</p>
+                <div style={{display: "flex", alignItems: "center", margin: "0", cursor: "pointer"}}>
+                    <img src={"playing.gif"} style={{mixBlendMode: "multiply", height: "32px", margin: ".5rem"}}/>
+                    <p>Recent Games</p>
+                </div>
                 <Gallery>
-                    <Card img={"sheep.png"} title={"Dead By Daylight"} played={"1,500 hours"}></Card>
-                    <Card img={"sheep.png"} title={"Pokemon TCG Live"} played={"??? hours"}></Card>
-                    <Card img={"sheep.png"} title={"Minecraft"} played={"??? hours"}></Card>
-                    <Card img={"sheep.png"} title={"Stardew Valley"} played={"??? hours"}></Card>
-                    <Card img={"sheep.png"} title={"Outer Wilds"} played={"??? hours"}></Card>
+                    {
+                        playing.toSorted((g, b) => b.playtime - g.playtime).map(game => {
+                            const time = game.playtime < 60 ? "< 1 hour" : `${Math.floor(game.playtime / 60)} hours`
+                            return <Card img={game.img} title={game.title} played={time}
+                                         onClick={() => window.open(game.url)}>
+
+                            </Card>
+                        })
+                    }
                 </Gallery>
             </div>
             <MenuButton onClick={() => navigate("/")} text={t("back_to_title_screen")}/>
