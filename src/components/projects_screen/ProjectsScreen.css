@@ -7,7 +7,7 @@
 }
 
 .projects {
-    animation: fade-in 3.5s;
+    animation: fade-in 1s;
     display: flex;
     flex-direction: column;
     align-items: center;

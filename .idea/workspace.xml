@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="417e5ee5-7c19-4a22-ab6c-16b901e672a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/loading_animation/Loader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/loading_animation/Loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/pt/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/pt/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loading_animation/Loader.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loading_animation/Loader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/settings/SettingsScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/SettingsScreen.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/settings/SettingsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/SettingsScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/typewriter/Typewriter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/typewriter/Typewriter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +105,7 @@
       <workItem from="1724279085319" duration="4691000" />
       <workItem from="1724284865574" duration="2710000" />
       <workItem from="1724341725353" duration="22000" />
-      <workItem from="1724346076946" duration="2551000" />
+      <workItem from="1724346076946" duration="3982000" />
     </task>
     <task id="LOCAL-00001" summary="Add listening message">
       <option name="closed" value="true" />
@@ -117,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724347983407</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fix loader spamming rerenders and toggle now works">
+      <option name="closed" value="true" />
+      <created>1724348710134</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724348710134</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +151,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add listening message" />
     <MESSAGE value="About me information is now proxied" />
-    <option name="LAST_COMMIT_MESSAGE" value="About me information is now proxied" />
+    <MESSAGE value="Fix loader spamming rerenders and toggle now works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix loader spamming rerenders and toggle now works" />
   </component>
 </project>

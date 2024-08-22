@@ -28,16 +28,34 @@ function SettingsScreen() {
         localStorage.setItem("load_anims", (!enabled).toString())
     }
 
+    const setTypewriterSpeed = (speed) => {
+        localStorage.setItem("typewriter", speed.target.value)
+    }
+
     return (
         <Loader>
             <div className={"title-screen"} key={counter}>
                 <Typewriter text={title} speed={40} className={"title-screen-name"}/>
                 <div className={"settings"}>
-                    <select onChange={(opt) => setLang(opt)} defaultValue={i18n.language}>
-                        <option value={"en"}>English</option>
-                        <option value={"pt"}>Português (Brasil)</option>
-                    </select>
-                    <div style={{display: "flex", alignItems: "center", gap: "1rem"}}>
+                    <div className={"settings-opt"}>
+                        <p>{t("settings_language")}</p>
+                        <select onChange={(opt) => setLang(opt)} defaultValue={i18n.language}>
+                            <option value={"en"}>English</option>
+                            <option value={"pt"}>Português (Brasil)</option>
+                        </select>
+                    </div>
+
+                    <div className={"settings-opt"}>
+                        <p>{t("typewriter_speed")}</p>
+                        <select onChange={(opt) => setTypewriterSpeed(opt)} defaultValue={localStorage.getItem("typewriter")}>
+                            <option value={"5"}>Slower</option>
+                            <option value={"1"}>Normal</option>
+                            <option value={"0.5"}>Fast</option>
+                            <option value={"0"}>Disabled</option>
+                        </select>
+                    </div>
+
+                    <div className={"settings-opt"}>
                         <p>{t("settings_load_animations")}</p>
                         <label htmlFor="my-toggle" className={"switch"}>
                             <input type="checkbox" id="my-toggle"
@@ -45,12 +63,9 @@ function SettingsScreen() {
                                    value={localStorage.getItem("load_anims") === "true"}/>
                             <span className="slider round"></span>
                         </label>
-
-
                     </div>
-
-                    <MenuButton onClick={() => navigate("/")} text={t("back_to_title_screen")}/>
                 </div>
+                <MenuButton onClick={() => navigate("/")} text={t("back_to_title_screen")}/>
             </div>
         </Loader>
     );

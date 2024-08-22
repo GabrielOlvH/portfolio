@@ -13,8 +13,8 @@ function TitleScreen() {
     let subtitle = t("title_screen_subtitle")
     return (
         <div className={"title-screen"}>
-            <Typewriter text={title} speed={40} className={"title-screen-name"} delay={1500}/>
-            <Typewriter text={subtitle} speed={40} delay={1500 + 40 * title.length} className={"subtitle"}/>
+            <Typewriter text={title} speed={40} className={"title-screen-name"} delay={500}/>
+            <Typewriter text={subtitle} speed={40} delay={500 + 40 * title.length} className={"subtitle"}/>
             <div className={"buttons"}>
                 <MenuButton onClick={() => navigate("/about")} text={t("title_screen_about_me_button")}/>
                 <MenuButton onClick={() => navigate("/projects")} text={t("title_screen_projects_button")}/>

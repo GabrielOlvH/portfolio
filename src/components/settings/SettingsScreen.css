@@ -25,13 +25,14 @@ select {
     text-align: center;
     background-color: lightyellow;
     border: none;
-    margin-bottom: 1rem;
     font-family: Consolas, serif;
     font-size: 0.8rem;
     padding: .4rem 1rem .4rem 1rem;
     transition: .25s background-color, .5s transform;
+    margin: 0;
     opacity: 90%;
     border-radius: 0;
+    flex: 1;
 }
 
 
@@ -97,10 +98,23 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
+.settings-opt {
+
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    width: 100%;
+}
+.settings-opt p {
+    flex: 1;
+}
 .settings {
+
     margin-top: 2rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0rem;
     align-items: center;
 }
