@@ -94,12 +94,18 @@
 
 .separator:nth-child(even) {
     padding-top: 20px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    @media screen and (max-width: 600px) {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    }
 }
 
 .separator:nth-child(odd) {
     padding-bottom: 20px;
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    @media screen and (max-width: 600px) {
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    }
 
 }
 

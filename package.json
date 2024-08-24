@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gabrielolvh.github.io/portfolio/",
+  "homepage": "/",
   "dependencies": {
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^1.0.53",

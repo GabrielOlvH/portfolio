@@ -6,7 +6,7 @@ import Spline from "@splinetool/react-spline";
 import AboutMeScreen from "./components/about_me/AboutMeScreen";
 import './i18n';
 import WorkExperienceScreen from "./components/work_experience_screen/WorkExperienceScreen";
-import {HashRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route, Routes} from "react-router-dom";
 import SettingsScreen from "./components/settings/SettingsScreen";
 
 
@@ -62,7 +62,7 @@ function App() {
 
     return (
         <Screen>
-            <HashRouter>
+            <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<TitleScreen/>}/>
                     <Route path="/about" element={<AboutMeScreen/>}/>
@@ -70,7 +70,7 @@ function App() {
                     <Route path="/work-experience" element={<WorkExperienceScreen/>}/>
                     <Route path="/settings" element={<SettingsScreen/>}/>
                 </Routes>
-            </HashRouter>
+            </BrowserRouter>
         </Screen>
     );
 }

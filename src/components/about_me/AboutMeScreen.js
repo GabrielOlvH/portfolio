@@ -1,12 +1,12 @@
 import './AboutMeScreen.css';
 import Typewriter from "../typewriter/Typewriter";
-import {useEffect, useRef, useState} from "react";
+import {useCallback, useEffect, useMemo, useRef, useState} from "react";
 import MenuButton from "../menu_button/MenuButton";
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router-dom";
 import Loader from "../loading_animation/Loader";
 
-const API_URL = "http://localhost:8080"
+const API_URL = "https://gabrielolv.dev/api"
 
 const Card = ({ img, title, played, onClick, children}) => {
     return (<div className={"card"} onClick={onClick}>
@@ -43,6 +43,8 @@ const Gallery = ({ children }) => {
         }, 5);
     };
 
+
+
     const stopScrolling = () => {
         if (scrollInterval.current) {
             clearInterval(scrollInterval.current);
@@ -50,6 +52,16 @@ const Gallery = ({ children }) => {
         }
     };
 
+    // force a rerender after loading the data
+    useMemo(() => {
+        startScrolling(1)
+        const id = setTimeout(() => {
+            stopScrolling()
+            setWheelPos(0)
+            clearTimeout(id)
+        }, 100)
+
+    }, [])
     return (
         <div ref={galleryRef} className={"gallery"}>
             <div style={{
@@ -152,6 +164,17 @@ const GetPlaying = (setPlaying) => {
     }, [setPlaying]);
 }
 
+const LoadingSong = {
+    title: "Loading",
+    img: "Loading",
+    artist: "Loading"
+}
+
+const LoadingGame = {
+    title: "Loading",
+    playtime: "Loading",
+    img: "Loading"
+}
 
 function AboutMeScreen() {
     const {t} = useTranslation();
@@ -159,14 +182,9 @@ function AboutMeScreen() {
 
     const title = t("about_me_screen_title");
 
-    const [listening, setListening] = useState([{
-        title: "Loading",
-        artist: "Loading"
-    }])
-    const [playing, setPlaying] = useState([{
-        title: "Loading",
-        artist: "Loading"
-    }])
+    const [listening, setListening] = useState([LoadingSong, LoadingSong, LoadingSong, LoadingSong])
+    const [playing, setPlaying] = useState([LoadingGame, LoadingGame, LoadingGame, LoadingGame])
+
     GetListening(setListening)
     GetPlaying(setPlaying)
 
@@ -179,16 +197,23 @@ function AboutMeScreen() {
                     <div className={"about-me-header"}>
                         <img src={"profile.png"} className={"profile-pic"} alt={"profile-pic"}/>
                         <div>
-                            <p style={{padding: "0", margin: "0", paddingRight: "1rem", marginBottom: "2px"}}>
-                                E-mail: gabrielh.oliveira222@gmail.com
-                            </p>
-                            <div style={{display: "flex", flexDirection: "row", marginTop: ".5rem", gap: ".5rem"}}>
-                                <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/github.svg"/>
-                                <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/gitlab.svg"/>
-                                <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/x.svg"/>
-                                <img height="20" width="20" src="https://unpkg.com/simple-icons@v13/icons/discord.svg"/>
-                                <img height="20" width="20"
-                                     src="https://unpkg.com/simple-icons@v13/icons/linkedin.svg"/>
+                            <div style={{display: "flex", alignItems: "center", gap: ".5rem"}}>
+                                <img height="18" width="18" src="https://unpkg.com/simple-icons@v13/icons/gmail.svg"/>
+                                <p style={{margin: "0"}}>gabrielh.oliveira222@gmail.com</p>
+                            </div>
+                            <div style={{display: "flex", alignItems: "center", gap: ".5rem"}}>
+                                <img height="18" width="18" src="https://unpkg.com/simple-icons@v13/icons/discord.svg"/>
+                                <p style={{margin: "0"}}>notsteven13</p>
+                            </div>
+                            <div style={{display: "flex", flexDirection: "row", gap: ".5rem"}}>
+                                <img height="18" width="18" src="https://unpkg.com/simple-icons@v13/icons/github.svg"
+                                     onClick={() => window.open("https://github.com/GabrielOlvH")}/>
+                                <img height="18" width="18" src="https://unpkg.com/simple-icons@v13/icons/gitlab.svg"
+                                     onClick={() => window.open("https://gitlab.com/StupPlayer")}/>
+                                <img height="18" width="18" src="https://unpkg.com/simple-icons@v13/icons/x.svg"
+                                     onClick={() => window.open("https://twitter.com/notstevenatall")}/>
+                                <img height="18" width="18" src="https://unpkg.com/simple-icons@v13/icons/linkedin.svg"
+                                     onClick={() => window.open("https://www.linkedin.com/in/gabriel-oliveira-a11564243/")}/>
                             </div>
                         </div>
                     </div>

@@ -1,8 +1,10 @@
 import './Loader.css';
 import {useState} from "react";
+import {useSettings} from "../Settings";
 
 function Loader({children}) {
-    const [loaded, setLoaded] = useState((localStorage.getItem("load_anims") === "true"));
+    const {settings} = useSettings();
+    const [loaded, setLoaded] = useState(settings.skip_loading);
     if (!loaded) {
         const id = setTimeout(() => {
             setLoaded(true)

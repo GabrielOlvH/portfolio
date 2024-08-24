@@ -43,7 +43,7 @@ setInterval(UpdateData, 60 * 1000);
 
 UpdateData();
 
-app.get('/recentlyplayed', async (req, res) => {
+app.get('/api/recentlyplayed', async (req, res) => {
     try {
         res.json(LAST_GAME_DATA)
     } catch (error) {
@@ -51,7 +51,7 @@ app.get('/recentlyplayed', async (req, res) => {
     }
 });
 
-app.get("/recentsongs", async (req, res) => {
+app.get("/api/recentsongs", async (req, res) => {
 
     try {
         res.json(LAST_SONG_DATA);

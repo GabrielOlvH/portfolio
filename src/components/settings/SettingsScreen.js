@@ -6,30 +6,21 @@ import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";
 import Loader from "../loading_animation/Loader";
+import {useSettings} from "../Settings";
 
 function SettingsScreen() {
     const {t, i18n} = useTranslation();
     const navigate = useNavigate()
+    const { settings, updateSetting} = useSettings();
+
 
     const [counter, setCounter] = useState(0)
 
     let title = t("settings_screen_title")
 
     const setLang = (opt) => {
-        console.log(opt.target.value)
         i18n.changeLanguage(opt.target.value)
         setCounter(counter + 1)
-
-    }
-
-
-    const toggleAnimations = () => {
-        let enabled = localStorage.getItem("load_anims") === "true"
-        localStorage.setItem("load_anims", (!enabled).toString())
-    }
-
-    const setTypewriterSpeed = (speed) => {
-        localStorage.setItem("typewriter", speed.target.value)
     }
 
     return (
@@ -46,8 +37,8 @@ function SettingsScreen() {
                     </div>
 
                     <div className={"settings-opt"}>
-                        <p>{t("typewriter_speed")}</p>
-                        <select onChange={(opt) => setTypewriterSpeed(opt)} defaultValue={localStorage.getItem("typewriter")}>
+                        <p>{t("settings_typewriter_speed")}</p>
+                        <select onChange={(opt) => updateSetting("typewriter_speed", parseFloat(opt.target.value))} defaultValue={settings.typewriter_speed}>
                             <option value={"5"}>Slower</option>
                             <option value={"1"}>Normal</option>
                             <option value={"0.5"}>Fast</option>
@@ -59,8 +50,8 @@ function SettingsScreen() {
                         <p>{t("settings_load_animations")}</p>
                         <label htmlFor="my-toggle" className={"switch"}>
                             <input type="checkbox" id="my-toggle"
-                                   onClick={() => toggleAnimations()}
-                                   value={localStorage.getItem("load_anims") === "true"}/>
+                                   onClick={() => updateSetting("skip_loading", !settings.skip_loading)}
+                                   value={settings.skip_loading}/>
                             <span className="slider round"></span>
                         </label>
                     </div>

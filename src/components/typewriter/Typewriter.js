@@ -1,8 +1,10 @@
 import './Typewriter.css';
 import {useMemo, useState} from "react";
+import {useSettings} from "../Settings";
 
 function Typewriter({text, speed, delay, ...props}) {
-    const multiplier = parseInt(localStorage.getItem("typewriter"))
+    const {settings} = useSettings();
+    const multiplier = settings.typewriter_speed
     const realSpeed = speed * multiplier;
     let i = -1;
     const [delayEnded, setDelayEnded] = useState(false);
