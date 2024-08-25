@@ -10,15 +10,19 @@ import Loader from "../loading_animation/Loader";
 const projects = [
     {
         id: "industrial_revolution",
-        img: "sheep.png"
+        img: "https://cdn.modrinth.com/data/kFs9AeXi/66b4c37413001232e53bdee818438939fa554d25.png"
+    },
+    {
+        id: "multiple_minecraft_mods",
+        img: "https://cdn.modrinth.com/data/kFs9AeXi/66b4c37413001232e53bdee818438939fa554d25.png"
     },
     {
         id: "pokemon_tcg_replay",
-        img: "sheep.png"
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzrbpVsH4HTaM3W_3tYrCq1hTikwdmGRj2eHHsLDJ0rH6HCA3dKpD6q1H-JGWIBsmXKak&usqp=CAU"
     },
     {
         id: "cafeteria_development_website",
-        img: "sheep.png"
+        img: "https://cafeteria.dev/img/logo.svg"
     },
     {
         id: "simple_text_editor",

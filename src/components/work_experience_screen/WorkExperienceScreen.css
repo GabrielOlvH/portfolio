@@ -57,6 +57,7 @@
 
     @media screen and (max-width: 600px) {
         flex-direction: column;
+        margin-bottom: 5rem;
     }
 }
 
@@ -142,8 +143,6 @@
 .separator-container:first-child {
     margin-left: 2rem;
 }
-
-
 
 .event {
     cursor: pointer;

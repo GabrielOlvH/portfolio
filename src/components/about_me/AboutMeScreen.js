@@ -1,10 +1,11 @@
 import './AboutMeScreen.css';
 import Typewriter from "../typewriter/Typewriter";
-import {useCallback, useEffect, useMemo, useRef, useState} from "react";
+import {useEffect, useMemo, useRef, useState} from "react";
 import MenuButton from "../menu_button/MenuButton";
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router-dom";
 import Loader from "../loading_animation/Loader";
+import {useWindowDimensions} from "../../App";
 
 const API_URL = "https://gabrielolv.dev/api"
 
@@ -22,12 +23,18 @@ const Card = ({ img, title, played, onClick, children}) => {
 
 const Gallery = ({ children }) => {
     const [wheelPos, setWheelPos] = useState(0);
+    const {width} = useWindowDimensions()
     const contentRef = useRef(null);
     const galleryRef = useRef(null);
     const scrollInterval = useRef(null);
 
     const startScrolling = (direction) => {
         stopScrolling(); // Garante que qualquer rolagem anterior seja parada
+
+        if (width < 600) {
+            setWheelPos(wheelPos + 100);
+            return;
+        }
         scrollInterval.current = setInterval(() => {
             setWheelPos(prevWheelPos => {
                 const newWheelPos = prevWheelPos + direction;
@@ -76,13 +83,11 @@ const Gallery = ({ children }) => {
                     className={"left-arrow"}
                     disabled={wheelPos <= 0}
                     onMouseDown={() => startScrolling(-2)}
-                    onMouseUp={stopScrolling}
-                    onMouseLeave={stopScrolling}
+                    onMouseUp={() => stopScrolling()}
                 >{"<"}</button>
                 <button className={"right-arrow"}
                         onMouseDown={() => startScrolling(2)}
-                        onMouseUp={stopScrolling}
-                        onMouseLeave={stopScrolling}
+                        onMouseUp={() => stopScrolling()}
                         disabled={wheelPos >= (contentRef.current?.offsetWidth - galleryRef.current?.offsetWidth)}>{">"}</button>
             </div>
             <div ref={contentRef} style={{ left: `${-wheelPos}px` }} className={"gallery-content"}>

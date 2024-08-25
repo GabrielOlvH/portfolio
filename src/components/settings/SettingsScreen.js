@@ -11,7 +11,7 @@ import {useSettings} from "../Settings";
 function SettingsScreen() {
     const {t, i18n} = useTranslation();
     const navigate = useNavigate()
-    const { settings, updateSetting} = useSettings();
+    const { settings, updateSetting } = useSettings();
 
 
     const [counter, setCounter] = useState(0)

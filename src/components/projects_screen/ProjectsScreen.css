@@ -31,20 +31,30 @@
     }
 }
 
-.project h1, .project p {
+
+.project-info h1, .project-info p {
     padding: 0;
     font-family: Consolas, serif;
-    margin: 0 10px 0 0;
+    margin: 0;
+
+    @media screen and (max-width: 600px) {
+        text-align: center;
+    }
+
 }
 
 .project {
+    border-radius: 15px;
     scale: 0.98;
+    padding: 0;
     display: flex;
     width: calc(100% - 15px);
     margin-top: 10px;
     transition: 0.25s scale;
-    overflow-x: scroll;
-
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .projects-list > div:nth-child(odd) {
@@ -59,10 +69,10 @@
     background-color: lightyellow;
     scale: 1;
     box-shadow: 0 5px 5px grey;
-
 }
 
 .project-info {
+    margin: 10px;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -73,6 +83,12 @@
     border-top-left-radius: 15px;
     height: 120px;
     margin-right: 12px;
+    @media screen and (max-width: 600px) {
+        width: 120px;
+        height: auto;
+        border-radius: 15px;
+    }
+
 }
 
 ::-webkit-scrollbar {
@@ -126,9 +142,7 @@
     display: flex;
     flex-direction: row;
     align-content: center;
+    gap: 2rem;
     justify-content: center;
-}
-
-.button-list1 .menu-button-container {
-    margin: 15px 0px 30px;
+    padding: 1rem;
 }
