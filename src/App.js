@@ -6,7 +6,7 @@ import Spline from "@splinetool/react-spline";
 import AboutMeScreen from "./components/about_me/AboutMeScreen";
 import './i18n';
 import WorkExperienceScreen from "./components/work_experience_screen/WorkExperienceScreen";
-import {BrowserRouter, HashRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import SettingsScreen from "./components/settings/SettingsScreen";
 
 

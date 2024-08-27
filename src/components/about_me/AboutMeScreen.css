@@ -62,6 +62,10 @@
     }
 }
 
+.social-media > img {
+    cursor: pointer;
+}
+
 
 .gallery button {
     pointer-events: all;
@@ -80,7 +84,7 @@
 }
 
 .gallery button:hover {
-    box-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 1);
     background: rgba(255, 255, 255, 0.25);
 }
 
