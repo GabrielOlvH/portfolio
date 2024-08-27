@@ -4,6 +4,9 @@
     align-items: center;
     justify-content: center;
     text-align: left;
+    @media screen and (max-width: 600px) {
+        max-width: calc(100dvw - 20px);
+    }
 }
 
 .title-screen-name {

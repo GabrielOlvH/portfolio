@@ -4,10 +4,11 @@
     align-items: center;
     justify-content: center;
     text-align: left;
-    max-width: 90dvw;
+
 }
 
 .aboutme {
+    max-width: 70dvw;
     animation: fade-in 1s;
     margin-bottom: 1rem;
 }
@@ -37,8 +38,8 @@
     overflow: hidden;
     max-width: 25vw;
     align-items: center;
-    @media screen and (max-width: 800px) {
-        max-width: 80vw;
+    @media screen and (max-width: 600px) {
+        max-width: calc(100dvw - 20px);
     }
 
 }
@@ -56,6 +57,9 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
 }
 
 
