@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="417e5ee5-7c19-4a22-ab6c-16b901e672a8" name="Changes" comment="">
+    <list default="true" id="417e5ee5-7c19-4a22-ab6c-16b901e672a8" name="Changes" comment="Fix warnings, update deps and polishing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/pt/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/pt/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_me/AboutMeScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects_screen/ProjectsScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/settings/SettingsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/SettingsScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/work_experience_screen/WorkExperienceScreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/title_screen/TitleScreen.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +52,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Gabriel/IdeaProjects/portfolio/public&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Gabriel/IdeaProjects/pokedex&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -106,7 +100,10 @@
       <workItem from="1724383486544" duration="3121000" />
       <workItem from="1724438726783" duration="5802000" />
       <workItem from="1724518499231" duration="1741000" />
-      <workItem from="1724614975968" duration="2895000" />
+      <workItem from="1724614975968" duration="6127000" />
+      <workItem from="1724779294926" duration="167000" />
+      <workItem from="1724791491152" duration="4866000" />
+      <workItem from="1724887860074" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="Add listening message">
       <option name="closed" value="true" />
@@ -148,7 +145,31 @@
       <option name="project" value="LOCAL" />
       <updated>1724519666341</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixes and polishing">
+      <option name="closed" value="true" />
+      <created>1724618167306</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1724618167306</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Polishing">
+      <option name="closed" value="true" />
+      <created>1724779451173</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724779451173</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix warnings, update deps and polishing">
+      <option name="closed" value="true" />
+      <created>1724799620825</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724799620825</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +192,9 @@
     <MESSAGE value="Fix loader spamming rerenders and toggle now works" />
     <MESSAGE value="Added option for typewriter speed" />
     <MESSAGE value="Proper config handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Proper config handling" />
+    <MESSAGE value="Polishing" />
+    <MESSAGE value="Fixes and polishing" />
+    <MESSAGE value="Fix warnings, update deps and polishing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix warnings, update deps and polishing" />
   </component>
 </project>
